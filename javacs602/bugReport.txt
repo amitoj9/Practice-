@@ -1,0 +1,10 @@
+Hits Algo: No bug.
+
+Page Rank Algo: No bug.
+
+Huffman Encoding: 
+No bug.
+
+Huffman Decoding:
+1. Not properly decode few characters get reduced from the orignal file.
+2. Not working properly for writing PDF.
