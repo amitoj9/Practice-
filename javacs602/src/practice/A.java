@@ -3,6 +3,15 @@ package practice;
 public class A {
 	int a,b,c;
 
+	public A(int a) {
+		super();
+		this.a = a;
+		System.out.println("ab"+a);
+	}
+	public A() {
+		super();
+	System.out.println("b");
+	}
 	public int getA() {
 		return a;
 	}

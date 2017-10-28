@@ -7,7 +7,8 @@ public class EmpLo implements Comparable<EmpLo>{
 
 	int empno;
 	int age;
-	
+	String fName;
+	String lName;
 	public int getEmpno() {
 		return empno;
 	}
@@ -57,6 +58,12 @@ public class EmpLo implements Comparable<EmpLo>{
 	@Override
 	public int compareTo(EmpLo arg0) {
 		// TODO Auto-generated method stub
+		return 0;
+	}
+
+/*	@Override
+	public int compareTo(EmpLo arg0) {
+		// TODO Auto-generated method stub
 		if(arg0.age==age)
 		{
 			return 0;
@@ -68,5 +75,5 @@ public class EmpLo implements Comparable<EmpLo>{
 			}
 			else 
 				return -1;
-	}
+	}*/
 }
