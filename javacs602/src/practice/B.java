@@ -9,6 +9,18 @@ public class B  extends A{
 		return x;
 	}
 
+	public B() {
+		super();
+		this.x = x;
+		System.out.println("B");
+	}
+
+	public B(int x) {
+		this();
+		this.x = x;
+		System.out.println("B"+x);
+	}
+
 	public void setX(int x) {
 		this.x = x;
 	}
@@ -42,8 +54,7 @@ public class B  extends A{
 	}
 	public static void main(String...strings)
 	{
-		B b=new B(12,41);
-		A a= new B(123,412);
+		B b =new B(2);
 	}
 	
 

@@ -4,8 +4,8 @@ public class StringUnique {
 
 	public static void main(String args[])
 	{
-		String s= new String("amitojsinghisaJavaDeveloperisdoingtestingforajavaapplicationwhichIdontknowhowitisworking");
-		System.out.println(checkString(s));
+		String s= new String("asdfghjkla");
+		System.out.println(isUniqueChars(s));
 	}
 	public static boolean checkString(String str)
 	{
@@ -30,4 +30,17 @@ public class StringUnique {
 		return false;
 		
 	}
+	public static boolean isUniqueChars(String str) {
+		int checker = 0;
+		for (int i = 0; i < str.length(); ++i) {
+		int val = str.charAt(i) - 'a';
+		System.out.println( val);
+		System.out.println(1 << val);
+		if ((checker & (1 << val)) > 0) return false;
+		System.out.println(checker );
+		checker |= (1 << val);
+		System.out.println(checker );
+		}
+		return true;
+		}
 }

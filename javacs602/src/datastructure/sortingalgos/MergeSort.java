@@ -4,17 +4,48 @@ public class MergeSort {
 
 	public static void main(String args[])
 	{
-		 int arr[] = {12, 11, 13, 5, 6, 7};
 		 
-	        System.out.println("Given Array");
-	        printArray(arr);
-	 
-	        MergeSort ob = new MergeSort();
-	        ob.mergeSort(arr, 0, arr.length-1);
-	 
-	        System.out.println("\nSorted array");
-	        printArray(arr);
+	    	int af[]= {2,1,5,229,9};
+			int bg[]= {0,1,2,3,4};
+			printArray(af);
+			mergeSort(af, 0, 4);
+			printArray(af);
 	}
+
+	 static int[] mergeArrays(int[] a, int[] b) {
+	        int m[]= new int[a.length+b.length];
+        int k=0,i=0,j=0;
+        
+        while( i<a.length && j<b.length)
+        {
+           if(a[i]<b[j])
+           {
+               m[k]=a[i];
+               i++;
+               k++;
+           }
+            else
+            {
+                m[k]=b[j];
+                j++;
+                k++;
+            }
+        }
+	        if(i<a.length)
+           {
+               for(int ss= i;ss<a.length;ss++,k++)
+               {
+                   m[k]=a[ss];
+               }
+           }
+        if(j<b.length)
+        {
+            for(int ss=j;ss<b.length;ss++,k++)
+                m[k]=b[ss];
+        }
+	        return m;
+	    }
+
 	 static void printArray(int arr[])
 	    {
 	        int n = arr.length;
@@ -30,7 +61,7 @@ public class MergeSort {
 			mergeSort(arr, l, m);
 			mergeSort(arr, m+1, r);
 			
-			
+			merge(arr,l,m,r);
 		}
 		
 	}
