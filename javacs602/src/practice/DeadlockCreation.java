@@ -6,8 +6,9 @@ private static Object ojb2=new Object();
 	public static void main(String args[])
 	{
 		ThreadDemo1 demo1=new ThreadDemo1();
-		demo1.start();
 		ThreadDemo2 demo2=new ThreadDemo2();
+		demo1.start();
+		
 		demo2.start();
 	}
 	public static class ThreadDemo1 extends Thread
@@ -35,7 +36,7 @@ private static Object ojb2=new Object();
 	{
 		public void run()
 		{
-			synchronized (ojb1) {
+			synchronized (ojb2) {
 				System.out.println("Thread 2 locked obj2");
 				try
 				{
@@ -46,7 +47,7 @@ private static Object ojb2=new Object();
 					
 				}
 				System.out.println("Waiting for obj1");
-			synchronized (ojb2) {
+			synchronized (ojb1) {
 			System.out.println("Thread 2 locked obj1");
 			}
 			}
