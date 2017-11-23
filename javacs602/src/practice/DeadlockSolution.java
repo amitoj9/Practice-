@@ -37,7 +37,7 @@ private static class ThreadDemo2 extends Thread
 	{
 		synchronized(obj1)
 		{
-			System.out.println("Thread 1 blocked obj1");
+			System.out.println("Thread 2 blocked obj1");
 			try
 			{sleep(100);
 			}
@@ -45,10 +45,10 @@ private static class ThreadDemo2 extends Thread
 			{
 				
 			}
-			System.out.println("Thred1 waiting for obj2");
+			System.out.println("Thread 2 waiting for obj2");
 		}
 		synchronized (obj2) {
-			System.out.println("Thread1 locked obj2");
+			System.out.println("Thread2 locked obj2");
 		}
 	}
 }
